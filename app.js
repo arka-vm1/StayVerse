@@ -95,7 +95,7 @@ app.use((req, res, next) => {
 
 // Server Status Route
 app.get("/", (req, res) => {
-    res.send("Server is running");
+    res.redirect('/listings');
 })
 
 // All Users Route (Authentication Route)
