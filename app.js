@@ -68,6 +68,7 @@ const sessionConfig = {
     saveUninitialized: true, // This is used to save the session even if it is not initialized
     cookie: {
         httpOnly: true, // This is used to prevent the cookie from being accessed by the client
+        secure: process.env.NODE_ENV === 'production', // This is used to prevent the cookie from being accessed by the client
         expires: Date.now() + 1000 * 60 * 60 * 24 * 7,
         maxAge: 1000 * 60 * 60 * 24 * 7
     }
